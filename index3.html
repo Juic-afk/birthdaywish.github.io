@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Aye Chan Myae!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@400;700&family=Noto+Sans+Myanmar:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(120deg, #ff9bc9 0%, #ffc6d8 100%);
+            color: #7e3a5e;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: 0 8px 32px rgba(206, 92, 145, 0.2);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            animation: fadeIn 2s ease;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            margin-bottom: 10px;
+            color: #d44d5c;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #7e3a5e;
+        }
+        
+        .birthday-girl {
+            font-size: 3rem;
+            color: #d44d5c;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        
+        .birthday-date {
+            font-size: 1.8rem;
+            color: #7e3a5e;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.5);
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 50px;
+            margin-top: 20px;
+        }
+        
+        /* Message Section */
+        .message {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 8px 32px rgba(206, 92, 145, 0.2);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            animation: slideUp 2s ease;
+        }
+        
+        .message p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        .burmese-text {
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 1.6rem;
+            color: #7e3a5e;
+            font-weight: bold;
+            line-height: 1.8;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .affectionate-name {
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 2.5rem;
+            color: #d44d5c;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .signature {
+            text-align: right;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #d44d5c;
+            margin-top: 30px;
+        }
+        
+        /* Photo Gallery */
+        .gallery {
+display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .photo-frame {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(126, 58, 94, 0.2);
+            transition: transform 0.5s ease;
+            border: 8px solid rgba(255, 255, 255, 0.6);
+        }
+        
+        .photo-frame:hover {
+            transform: scale(1.05);
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff9bc9 0%, #ffc6d8 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Wishes Section */
+        .wishes {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 8px 32px rgba(206, 92, 145, 0.2);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            animation: fadeIn 3s ease;
+        }
+        
+        .cake {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .music-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #d44d5c;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .music-btn:hover {
+            transform: scale(1.1);
+            background: #b33c4a;
+        }
+        
+        .music-info {
+            font-size: 1rem;
+            color: #7e3a5e;
+            max-width: 0;
+            overflow: hidden;
+            transition: max-width 0.5s;
+            white-space: nowrap;
+        }
+        
+        .music-player:hover .music-info {
+            max-width: 200px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #7e3a5e;
+            font-size: 1.1rem;
+        }
+        
+        .hearts {
+            color: #d44d5c;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+color: rgba(212, 77, 92, 0.5);
+            font-size: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .birthday-girl {
+                font-size: 2.5rem;
+            }
+            
+            .message p {
+                font-size: 1.2rem;
+            }
+            
+            .burmese-text {
+                font-size: 1.4rem;
+            }
+            
+            .photo-frame {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .music-player {
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .birthday-girl {
+                font-size: 2rem;
+            }
+            
+            .message p {
+                font-size: 1.1rem;
+            }
+            
+            .burmese-text {
+                font-size: 1.2rem;
+            }
+            
+            .photo-frame {
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <div class="music-btn" id="playBtn">
+            <i class="fas fa-play"></i>
+        </div>
+        <div class="music-info">Birthday Song - Click to play</div>
+        <audio id="bgMusic" loop>
+    <source src="audio/birthday-song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+    </div>
+    
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Happy Birthday</h1>
+            <div class="birthday-girl">Aye Chan Myae</div>
+            <div class="affectionate-name"></div>
+          
+        </header>
+        
+        <!-- Message Section -->
+        <section class="message">
+            <p>To my dearest Aye Chan Myae,</p>
+                       
+            <div class="burmese-text">
+                ကိုကိုချစ်တဲ့ပူတူးလေးဒီနေ့ကျရောက်တဲ့မွေးနေ့မှာပျော်ရွင်ပါစေ။
+            </div>
+            
+            <div class="burmese-text">
+               ကိုကိုအနားမှာအချိန်အကြာဆက်ပြီးချစ်စရာကောင်းပေးနေနိုင်ပါစေ။
+            </div>
+            
+            <p>May your birthday be filled with laughter, love, and all the things that make you the amazing person you are.</p>
+            
+            <div class="burmese-text">
+                ပူတူးလေးရဲ့ဘဝမှာ အိပ်မက်တိုင်းလက်တွေ့ဖြစ်ပြီး ပျော်ရွှင်မှုတွေနဲ့ ပြည့်စုံနေပါစေလို ဆုတောင်းပေးရင်း
+            </div>
+            
+            <div class="signature">With all my love</div>
+        </section>
+        
+        <!-- Photo Gallery -->
+<div class="gallery">
+    <div class="photo-frame">
+        <img src="images/photo1.jpg" alt="Beautiful Aye Chan Myae">
+    </div>
+    <div class="photo-frame">
+        <img src="images/photo2.jpg" alt="Our Memory Together">
+    </div>
+    <div class="photo-frame">
+        <img src="images/photo3.jpg" alt="Her Beautiful Smile">
+    </div>
+</div>        
+        <!-- Wishes Section -->
+        <section class="wishes">
+            <div class="cake">🎂</div>
+            <h2>May your day be as beautiful as you are!</h2>
+            <div class="burmese-text">
+                ပူတူးလေးရဲ့ဘဝလမ်းခရီးမှာ အောင်မြင်မှုတွေနဲ့ ပျော်ရွှင်မှုတွေ အမြဲတမ်းရှိပါစေ
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p>Made with <span class="hearts">❤️❤️❤️</span> for my beloved Aye Chan Myae</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Add floating hearts background
+        function createHearts() {
+            const floatingHearts = document.getElementById('floatingHearts');
+            const numberOfHearts = 50;
+            
+            for (let i = 0; i < numberOfHearts; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.classList.add('heart');
+                
+                // Random properties for each heart
+                const size = Math.random() * 20 + 10;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 6 + 4;
+                const animationDelay = Math.random() * 5;
+                
+                heart.style.fontSize = ${size}px;
+                heart.style.left = ${left}vw;
+                heart.style.animationDuration = ${animationDuration}s;
+                heart.style.animationDelay = ${animationDelay}s;
+                
+                floatingHearts.appendChild(heart);
+            }
+        }
+        
+        // Music player functionality
+        const audio = document.getElementById('bgMusic');
+        const playBtn = document.getElementById('playBtn');
+        let isPlaying = false;
+        
+        playBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                audio.pause();
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            } else {
+                audio.play();
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            createHearts();
+            
+            // Add click heart effect
+            document.body.addEventListener('click', function(e) {
+                createHeart(e.clientX, e.clientY);
+            });
+            
+            function createHeart(x, y) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.style.position = 'fixed';
+                heart.style.left = x + 'px';
+                heart.style.top = y + 'px';
+                heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+                heart.style.color = '#d44d5c';
+                heart.style.pointerEvents = 'none';
+                heart.style.zIndex = '9999';
+                heart.style.opacity = '1';
+                heart.style.transition = 'all 1s ease';
+                
+                document.body.appendChild(heart);
+                
+                setTimeout(function() {
+                    heart.style.transform = 'translateY(-' + Math.random() * 100 + 'px) translateX(' + (Math.random() * 100 - 50) + 'px)';
+                    heart.style.opacity = '0';
+                }, 10);
+                
+                setTimeout(function() {
+                    document.body.removeChild(heart);
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
